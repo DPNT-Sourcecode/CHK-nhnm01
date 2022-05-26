@@ -7,9 +7,9 @@ def sum_two_integer(input_one, input_two):
         int(input_two)
     except ValueError:
         logging.error("Input is not a integer")
-    if input_one and input_two 
+    if 0 <= input_one <= 100 and 0 <= input_two <= 100:
+        return sum(input_one, input_two)
 
-    pass
 
 
 
