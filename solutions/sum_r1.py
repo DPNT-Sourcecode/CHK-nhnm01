@@ -1,4 +1,5 @@
 
 
-def sum_two_numbers(input_one, input_two):
+def sum_two_integer(input_one, input_two):
     pass
+
