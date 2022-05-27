@@ -25,7 +25,7 @@ def checkout(skus: str) -> int:
     if not skus:
         return -1
 
-    skus_array = skus.split(',')
+    skus_array = skus.split()
 
     total = 0
 
@@ -38,6 +38,7 @@ def checkout(skus: str) -> int:
         total += price_map[item]
 
     return total
+
 
 
 
