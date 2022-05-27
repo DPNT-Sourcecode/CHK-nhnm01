@@ -22,5 +22,16 @@ special_offers = {
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus: str) -> int:
+    skus_array = skus.split(',')
+
+    total = 0
+
+    for item in skus_array:
+        if item not in price_map:
+            raise ValueError("Item is not in stock")
+
+        total += price_map[item]
+
+    return total
 
 
