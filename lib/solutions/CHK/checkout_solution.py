@@ -31,8 +31,7 @@ special_offers = {
     "E": [
         {
             "quantity": 2,
-            "price": None,
-            "item_deduction": 1,
+            "price": 40,
             "description": "Buy one get one free"
         }
     ]
@@ -63,9 +62,8 @@ def checkout(skus: str) -> int:
 
                 for offer in special_offers[item]:
                     if count >= offer['quantity'] >= best_offer_by_qty:
-                        if best_offer_by_qty:
-                            price = offer['price']
-                            best_offer_by_qty = offer['quantity']
+                        price = offer['price']
+                        best_offer_by_qty = offer['quantity']
 
                 count -= best_offer_by_qty
                 total += price
@@ -74,4 +72,5 @@ def checkout(skus: str) -> int:
                 total += price_map[item]
 
     return total
+
 
