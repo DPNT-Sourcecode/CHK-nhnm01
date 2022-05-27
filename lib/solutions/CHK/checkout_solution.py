@@ -24,7 +24,7 @@ special_offers = {
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus: str) -> int:
-    if not isinstance(skus, list):
+    if not skus:
         return -1
 
     skus_counter = Counter(skus)
@@ -44,6 +44,7 @@ def checkout(skus: str) -> int:
                 total += price_map[item]
 
     return total
+
 
 
 
