@@ -22,8 +22,7 @@ special_offers = {
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus: str) -> int:
-    print(skus)
-    skus_array = skus.split(',')
+    skus_array = [skus]
 
     total = 0
 
@@ -34,6 +33,7 @@ def checkout(skus: str) -> int:
         total += price_map[item]
 
     return total
+
 
 
 
