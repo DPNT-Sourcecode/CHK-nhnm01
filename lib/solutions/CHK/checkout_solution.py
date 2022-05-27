@@ -33,11 +33,12 @@ def checkout(skus: str) -> int:
         item = item.upper()
 
         if item not in price_map:
-            raise ValueError("Item is not in stock")
+            return -1
 
         total += price_map[item]
 
     return total
+
 
 
 
