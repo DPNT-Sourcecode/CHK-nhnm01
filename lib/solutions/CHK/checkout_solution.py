@@ -24,6 +24,9 @@ special_offers = {
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus: str) -> int:
+    if not len(skus):
+        return 0
+
     if not skus:
         return -1
 
@@ -44,6 +47,7 @@ def checkout(skus: str) -> int:
                 total += price_map[item]
 
     return total
+
 
 
 
