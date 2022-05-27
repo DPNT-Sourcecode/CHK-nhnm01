@@ -72,5 +72,3 @@ def checkout(skus: str) -> int:
                 total += price_map[item]
 
     return total
-
-
