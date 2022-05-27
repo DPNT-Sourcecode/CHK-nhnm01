@@ -10,5 +10,3 @@ class TestSum:
     def test_sum_failure(self):
         with pytest.raises(ValueError):
             sum_solution.compute(1, None)
-
-

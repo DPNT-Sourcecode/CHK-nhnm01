@@ -9,4 +9,3 @@ def compute(input_one: int, input_two: int):
         return input_one + input_two
     else:
         raise ValueError("The input provided is not between 0 to 100")
-
