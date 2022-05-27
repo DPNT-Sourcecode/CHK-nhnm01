@@ -1,6 +1,13 @@
-from solutions.TST import one
+import pytest
+
+from solutions.sum_r1 import sum_two_integer
 
 
-class TestSum():
+class TestSum:
     def test_sum(self):
-        assert one.get() == 1
+        assert sum_two_integer(5, 100) == 105
+
+    def test_sum_failure(self):
+        with pytest.raises(ValueError):
+            sum_two_integer(1, None)
+
