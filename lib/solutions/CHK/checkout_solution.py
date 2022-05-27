@@ -4,20 +4,37 @@ price_map = {
     "A": 50,
     "B": 30,
     "C": 20,
-    "D": 15
+    "D": 15,
+    "E": 40
 }
 
 special_offers = {
-    "A": {
-        "quantity": 3,
-        "price": 130,
-        "description": "3 for the price of 130"
-    },
-    "B": {
-        "quantity": 2,
-        "price": 45,
-        "description": "2 for the price of 45"
-    }
+    "A": [
+        {
+            "quantity": 3,
+            "price": 130,
+            "description": "3 for the price of 130"
+        },
+        {
+            "quantity": 5,
+            "price": 200,
+            "description": "5 for the price of 200"
+        }
+    ],
+    "B": [
+        {
+            "quantity": 2,
+            "price": 45,
+            "description": "2 for the price of 45"
+        }
+    ],
+    "E": [
+        {
+            "quantity": 2,
+            "price": -1,
+            "description": "Buy one get one free"
+        }
+    ]
 }
 
 
@@ -47,6 +64,7 @@ def checkout(skus: str) -> int:
                 total += price_map[item]
 
     return total
+
 
 
 
