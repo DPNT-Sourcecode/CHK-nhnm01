@@ -37,7 +37,7 @@ def checkout(skus: str) -> int:
             return -1
 
         while count > 0:
-            if item in special_offers and special_offers[item]['quantity'] >= count:
+            if item in special_offers and count >= special_offers[item]['quantity']:
                 count -= special_offers[item]['quantity']
                 total += special_offers[item]['price']
             else:
@@ -45,5 +45,6 @@ def checkout(skus: str) -> int:
                 total += price_map[item]
 
     return total
+
 
 
