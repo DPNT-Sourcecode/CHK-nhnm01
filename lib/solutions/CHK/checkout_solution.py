@@ -1,3 +1,5 @@
+from collections import Counter
+
 price_map = {
     "A": 50,
     "B": 30,
@@ -25,25 +27,15 @@ def checkout(skus: str) -> int:
     if not skus:
         return -1
 
-    skus_array = skus.split()
+    skus = skus.upper()
+    skus_counter = Counter(skus)
 
     total = 0
 
-    for item in skus_array:
-        item = item.upper()
-
+    for item in skus_counter:
         if item not in price_map:
             return -1
 
         total += price_map[item]
 
     return total
-
-
-
-
-
-
-
-
-
